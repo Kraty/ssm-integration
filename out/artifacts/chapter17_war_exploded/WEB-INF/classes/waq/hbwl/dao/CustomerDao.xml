@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="waq.hbwl.dao.CustomerDao">
+
+    <!-- mapper代理开发的规范 1.接口的名称与对应的xml文件的名称要一致 2.接口文件和映射文件需要放在同一个包中 3.接口中的方法名和mapper.xml定义的每个执行语句的id相同 -->
+    <!-- 根据id查询客户信息 -->
+    <select id="findCustomerById" parameterType="Integer"
+            resultType="customer">
+		select * from customer where id = #{id}
+	</select>
+
+</mapper>
